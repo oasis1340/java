@@ -101,8 +101,21 @@ public class MethodTask4 {
 		}
 		System.out.printf("최대값 : %d, 최소값 : %d", max, min);
 	}
-//	매개 변수 2개 : 최소값과 최대값을 구할 배열, 최소값과 최대값을 구한 결과를 담을 배열
 //	6) String 클래스의 indexOf()메소드 만들기, 문자열 전체와 검색할 문자를 전달 받는다.
+	
+//	알고리즘 : 문자열 전체와 검색할 문자를 전달 받아서 문자를 키 값으로 split을 사용하여 새로운 배열에 담아서
+//	새로운 배열에 반복문으로 전달 받은 문자의 위치를 출력
+		
+	void wordFinder(String content, String word) {
+		String[] newContent = content.split(word);
+		int count = 0; 
+		for (int i = 0; i < newContent.length; i++) {
+			if (newContent[i] == word) {
+				count += i;
+			}
+		}
+		System.out.println(count);
+	}
 	
 	
 	public static void main(String[] args) {
@@ -133,7 +146,7 @@ public class MethodTask4 {
 		
 //		4번
 //		int[] arr = new int[5];
-//		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 //		String message = "정수 5개를 입력해주세요. ex)1 2 3 4 5";
 //		
 //		System.out.println(message);
@@ -144,6 +157,17 @@ public class MethodTask4 {
 //		mt4.printMaxAndMin(arr);
 		
 //		5번
+		
+//		6번
+		String message1 = "문자열을 입력해주세요. ex)scanner ", message2 = "찾으시는 문자를 입력해주세요. ex)n", content = "", text = "";
+		
+		System.out.println(message1);
+		content = sc.nextLine();
+		System.out.println(message2);
+		text = sc.nextLine();
+		
+		
+		mt4.wordFinder(content, text);
 		
 		
 		
