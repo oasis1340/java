@@ -103,18 +103,23 @@ public class MethodTask4 {
 	}
 //	6) String 클래스의 indexOf()메소드 만들기, 문자열 전체와 검색할 문자를 전달 받는다.
 	
-//	알고리즘 : 문자열 전체와 검색할 문자를 전달 받아서 문자를 키 값으로 split을 사용하여 새로운 배열에 담아서
+//	알고리즘 : 문자열 전체와 검색할 문자를 전달 받아서 문자를 키 값으로 새로운 배열에 담아서
 //	새로운 배열에 반복문으로 전달 받은 문자의 위치를 출력
 		
-	void wordFinder(String content, String word) {
-		String[] newContent = content.split(word);
-		int count = 0; 
-		for (int i = 0; i < newContent.length; i++) {
+	void wordFinder(String content, char word) {
+		char[] newContent = new char[content.length()];
+		int count = 0;
+ 
+		for (int i = 0; i < content.length(); i++) {
+			newContent[i] = content.charAt(i);
+			count++;
+		}
+		for (int i = 0; i < count; i++) {
 			if (newContent[i] == word) {
-				count += i;
+				System.out.printf("%c는 index[%d]에 있습니다.\n", word, i);
 			}
 		}
-		System.out.println(count);
+		
 	}
 	
 	
@@ -159,12 +164,12 @@ public class MethodTask4 {
 //		5번
 		
 //		6번
-		String message1 = "문자열을 입력해주세요. ex)scanner ", message2 = "찾으시는 문자를 입력해주세요. ex)n", content = "", text = "";
-		
+		String message1 = "문자열을 입력해주세요. ex)scanner ", message2 = "찾으시는 문자를 입력해주세요. ex)n", content = "";
+		char text = ' ';
 		System.out.println(message1);
 		content = sc.nextLine();
 		System.out.println(message2);
-		text = sc.nextLine();
+		text = sc.next().charAt(0);
 		
 		
 		mt4.wordFinder(content, text);
