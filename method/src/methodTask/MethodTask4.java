@@ -115,11 +115,14 @@ public class MethodTask4 {
 			newContent[i] = content.charAt(i);
 			count++;
 		}
+		
 		for (int i = 0; i < count; i++) {
-			if (newContent[i] == word) {
+			
+			if (newContent[i] == word) {		
 				System.out.printf("%c는 index[%d]에 있습니다.\n", word, i);
 			}
 		}
+	
 	}
 	
 	
@@ -138,7 +141,14 @@ public class MethodTask4 {
 //		mt4.charCount(text1, text2);
 		
 //		2번
+//		String message = "문자열을 입력해주세요.";
+		int[] arr = new int[5];
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println(message);
 		
+		for (int i = 0; i < 5; i++) {
+			arr[i] = sc.nextInt();
+		}
 		
 //		3번
 //		String message = "문자열을 입력해주세요. ex)일공이사", content = "";
@@ -170,6 +180,7 @@ public class MethodTask4 {
 //		for (int i = 0; i < arr.length; i++) {
 //			arr[i] = sc.nextInt();
 //		}
+//		int[] arr = {1, 2, 3, 4, 5};
 //		
 //		mt4.printMaxAndMin(arr);
 		
