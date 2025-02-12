@@ -1,5 +1,17 @@
 package castingTask2;
 
+class Login {
+	
+	String name;
+	
+	public Login(String name) {;}
+	
+	void Login() {
+		System.out.printf("%s님이 로그인 하셨습니다.\n", name);
+	}
+}
+
+
 class Monster {
 	String name;
 	public Monster() {;}

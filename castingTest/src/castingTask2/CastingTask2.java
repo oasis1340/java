@@ -11,7 +11,9 @@ public class CastingTask2 extends Character {
 		Monster fairy = new Fairy();
 		Monster human = new Human();
 		
+		Login login = new Login(jy.name);
 		
+		login.Login();
 		
 		jy.hunt(orc);
 		jy.hunt(fairy);

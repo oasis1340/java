@@ -143,7 +143,7 @@ public class MethodTask4 {
 //		2번
 //		String message = "문자열을 입력해주세요.";
 		int[] arr = new int[5];
-//		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 //		System.out.println(message);
 		
 		for (int i = 0; i < 5; i++) {
