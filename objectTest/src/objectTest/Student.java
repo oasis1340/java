@@ -8,6 +8,7 @@ import java.util.Objects;
 //5. toString 재정의
 //6. hashcode, equals 재정의
 
+
 public class Student {
 	private int id;
 	private String name;

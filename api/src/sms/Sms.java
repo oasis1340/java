@@ -42,7 +42,7 @@ public class Sms {
    public static void main(String[] args) {
       Sms sms = new Sms();
       Lotto lotto = new Lotto();
-      String[] luckyNumbers = lotto.getLuckyNumber();
+      String[] luckyNumbers = lotto.drawNumber();
       String message = "";
       
       for(String number : luckyNumbers) {
