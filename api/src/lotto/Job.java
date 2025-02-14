@@ -11,6 +11,7 @@ public class Job {
 //		super();
 		this.job = job;
 	}
+	
 
 	public String getJob() {
 		return job;

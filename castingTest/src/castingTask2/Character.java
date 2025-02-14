@@ -6,7 +6,7 @@ class Login {
 	
 	public Login(String name) {;}
 	
-	void Login() {
+	public void Login() {
 		System.out.printf("%s님이 로그인 하셨습니다.\n", name);
 	}
 }
@@ -60,10 +60,19 @@ public class Character {
 		this.job = job;
 		this.level = level;
 	}
+	
 
 
 
-	void hunt (Monster monster) {
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void hunt (Monster monster) {
 		if (monster instanceof Orc) {
 			monster = (Orc)monster;
 			monster.dropItem();
