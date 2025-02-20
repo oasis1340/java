@@ -51,7 +51,7 @@ public class StreamTask3 {
 //		IntStream.range(0, 50).forEach((ab) -> {
 //			num6.add(ab);
 //		});
-//		IntStream.rangeClosed(1, 20).forEach(System.out::print);
+//		IntStream.rangeClosed(10, 20).forEach(System.out::print);
 		
 //		7) 1~10까지 ArrayList에 담고 짝수만 모두 더해서 출력하기
 //		ArrayList<Integer> num7 = new ArrayList<Integer>();
@@ -66,12 +66,12 @@ public class StreamTask3 {
 //		str.stream().filter(s -> s.contains("a")).forEach(System.out::println);
 //		
 //		9) 1~10까지 ArrayList에 담고 모든 합을 출력하기
-//		ArrayList<Integer> num9 = new ArrayList<Integer>();
-//		IntStream.rangeClosed(1, 10).forEach(num -> {
-//			num9.add(num);
-//		});
-//		int sum = num9.stream().reduce(0,(a,b) -> a+b);
-//		System.out.println(sum);
+		ArrayList<Integer> num9 = new ArrayList<Integer>();
+		IntStream.rangeClosed(1, 10).forEach(num -> {
+			num9.add(num);
+		});
+		int sum = num9.stream().reduce(0,(a,b) -> a + b);
+		System.out.println(sum);
 		
 		
 		
