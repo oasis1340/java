@@ -45,7 +45,7 @@ class ClientThread extends Thread{
 public class Client {
    public static void main(String[] args) throws IOException{
       String name = "나양진영아니다";
-      String ip = "192.168.30.254";
+      String ip = "";
       
 //      try-with-resources
       try (
