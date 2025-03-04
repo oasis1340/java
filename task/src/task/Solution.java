@@ -1,27 +1,18 @@
 package task;
 
-import java.util.Scanner;
+class Solution {
+    public int[] solution(String[] cpr) {
+        int[] answer = {0, 0, 0, 0, 0};
+        String[] basic_order = {"check", "call", "pressure", "respiration", "repeat"};
 
-public class Solution {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String code = sc.next();
-        String lastFourWords = code.substring(code.length()-4, code.length());
-
-        if(lastFourWords.equals("_eye")){
-            System.out.println("Ophthalmologyc");
+        for(int i=0; i < basic_order.length; i++){
+            for(int j=0; j < basic_order.length; j++){
+                if(cpr[i].equals(basic_order[j])){
+                    answer[i] = basic_order[j].indexOf(j);
+                    break;
+                }
+            }
         }
-        else if(lastFourWords.equals("head")){
-            System.out.println("Neurosurgery");
-        }
-        else if(lastFourWords.equals("infl")){
-            System.out.println("Orthopedics");
-        }
-        else if (lastFourWords.equals("skin")){
-            System.out.println("Dermatology");
-        }
-        else{
-            System.out.println("direct recommendation");
-        }
+        return answer;
     }
 }
