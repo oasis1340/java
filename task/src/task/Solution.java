@@ -1,18 +1,16 @@
 package task;
 
-class Solution {
-    public int[] solution(String[] cpr) {
-        int[] answer = {0, 0, 0, 0, 0};
-        String[] basic_order = {"check", "call", "pressure", "respiration", "repeat"};
+import java.util.Scanner;
 
-        for(int i=0; i < basic_order.length; i++){
-            for(int j=0; j < basic_order.length; j++){
-                if(cpr[i].equals(basic_order[j])){
-                    answer[i] = basic_order[j].indexOf(j);
-                    break;
-                }
-            }
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        if (n % 2 == 0) {
+            System.out.printf("%d is even", n);
+        }else if(n % 2 == 1) {
+            System.out.printf("%d is odd", n);
         }
-        return answer;
     }
 }
