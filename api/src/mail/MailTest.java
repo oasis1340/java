@@ -100,11 +100,11 @@ public class MailTest {
 	public static void main(String[] args) {
 		
 		MailTest sendMail = new MailTest();
-		String[] mail = {"bear595@naver.com"};
+		String[] mail = {"jjy2564@naver.com"};
 		
-		for (int i = 0; i < 4; i++) {
+//		for (int i = 0; i < 4; i++) {
 			sendMail.sendMail(mail[0]);
-		}
+//		}
 		
 	}
 }
