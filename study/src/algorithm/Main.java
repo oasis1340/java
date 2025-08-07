@@ -7,8 +7,15 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		String word = sc.next();
+		String a = sc.next();
+		String b = sc.next();
+		String ra = new StringBuilder(a).reverse().toString();
+		String rb = new StringBuilder(b).reverse().toString();
 		
-		System.out.println(word.length());
+		if (Integer.parseInt(ra) > Integer.parseInt(rb)) {
+			System.out.println(ra);
+		} else {
+			System.out.println(rb);
+		}
 	}
 }
