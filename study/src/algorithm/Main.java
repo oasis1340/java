@@ -1,21 +1,27 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		String a = sc.next();
-		String b = sc.next();
-		String ra = new StringBuilder(a).reverse().toString();
-		String rb = new StringBuilder(b).reverse().toString();
+		int num = 0;
 		
-		if (Integer.parseInt(ra) > Integer.parseInt(rb)) {
-			System.out.println(ra);
-		} else {
-			System.out.println(rb);
+		List<Integer> nums = new ArrayList<>();
+		
+		for (int i = 0; i < 10; i++) {
+			num = sc.nextInt();
+			int remainder = num % 42;
+			nums.add(remainder);
 		}
+		
+		List<Integer> remainders = nums.stream().distinct().collect(Collectors.toList());
+		
+		System.out.println(remainders.size());
 	}
 }
