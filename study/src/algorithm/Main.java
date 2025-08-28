@@ -1,6 +1,6 @@
 package algorithm;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -8,35 +8,22 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		ArrayList<Double> nums = new ArrayList<>();
+		String s = sc.next();
 		
-		int count = sc.nextInt();
-		int max = 0;
-		double avg = 0;
-		double sum = 0;
+		int[] arr = new int[26];
+		Arrays.fill(arr, -1);
 		
-		for (int i = 0; i < count; i++) {
-			int num = sc.nextInt();
-			nums.add((double) num);
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
 			
-			if (num > max) {
-				max = num;
+			if (arr[c - 'a'] == -1) {
+				arr[c - 'a'] = i;
 			}
 		}
 		
-		for (int j = 0; j < count; j++) {
-			double num = nums.get(j);
-			nums.set(j, num / max * 100);
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
 		}
 		
-		
-		for (int k = 0; k < count; k++) {
-			double num = nums.get(k);
-			sum += num;
-		}
-		
-		avg = sum / count;
-		
-		System.out.println(avg);
 	}
 }
