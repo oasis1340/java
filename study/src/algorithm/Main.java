@@ -6,12 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        int width = sc.nextInt();
-        int length = sc.nextInt();
+        Long num = sc.nextLong();
         
-        int result = width * length;
+        Long result = num * 4;
         
-        System.out.println(result);
-        
+        System.out.println(result);    
     }
 }
