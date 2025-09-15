@@ -1,39 +1,32 @@
 package algorithm;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
     	
-        Scanner sc = new Scanner(System.in);
-                
-        String factor = "factor";
-        String multiple = "multiple";
-        String neither = "neither";
-        
-        ArrayList<String> result = new ArrayList<String>();
-        
-		while ( true ) {
-			int a = sc.nextInt();
-			int b = sc.nextInt();
-			
-			if (a != 0 && b != 0) {
-				if ( a >= b && a % b == 0 ) {
-					result.add(multiple);
-				} else if ( a < b && b % a == 0 ) {
-					result.add(factor);
-				} else if ( a % b != 0 || b % a != 0 ) {
-					result.add(neither);
-				}
-			}
-			if ( a == 0 && b == 0) {
-				break;
-			}
-		}
-        
-        for (int i = 0; i < result.size(); i++) {
-        	System.out.println(result.get(i));
-        }
-    }
+    	int num = 0;
+    	int sum = 0;
+    	int avg = 0;
+    	int mid = 0;
+    	
+    	ArrayList<Integer> nums = new ArrayList<Integer>();
+    	
+    	for (int i = 0; i < 5; i++) {
+    		num = sc.nextInt();
+    		nums.add(num);
+    		sum += num;
+    	}
+    	
+    	Collections.sort(nums);
+    	
+    	avg = sum / 5;
+    	mid = nums.get(2);
+    	
+    	System.out.println(avg);
+    	System.out.println(mid);
+    }    
 }
