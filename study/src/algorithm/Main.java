@@ -6,22 +6,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    	Scanner sc = new Scanner(System.in);
-    	
-    	int num = 0;
-    	int count = sc.nextInt();
-    	
-    	ArrayList<Integer> nums = new ArrayList<Integer>();
-    	
-    	for (int i = 0; i < count; i++) {
-    		num = sc.nextInt();
-    		nums.add(num);
-    	}
-    	
-    	Collections.sort(nums);
-    	
-    	for (int i = 0; i < nums.size(); i++) {
-    		System.out.println(nums.get(i));
-    	}
-    }    
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        ArrayList<Integer> scores = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            scores.add(sc.nextInt());
+        }
+
+        Collections.sort(scores);
+        Collections.reverse(scores);
+
+        System.out.println(scores.get(k - 1));
+    }
 }
