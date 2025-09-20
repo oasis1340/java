@@ -8,17 +8,20 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        ArrayList<Integer> scores = new ArrayList<>();
+        String n = sc.next();
+        
+        ArrayList<Integer> nums = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
-            scores.add(sc.nextInt());
+        for (int i = 0; i < n.length(); i++) {
+            String[] num = (n.split(""));
+            nums.add(Integer.parseInt(num[i]));
         }
 
-        Collections.sort(scores);
-        Collections.reverse(scores);
-
-        System.out.println(scores.get(k - 1));
+        Collections.sort(nums);
+        Collections.reverse(nums);
+        
+        for (int i = 0; i < nums.size(); i++) {
+        	System.out.print(nums.get(i));
+        }
     }
 }
